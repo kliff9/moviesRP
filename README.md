@@ -13,6 +13,8 @@ A Movie application where users are able to search through a database of movies 
 
 ◼ Angular - A component-based framework for building scalable web applications
 
+◼ API - https://developers.themoviedb.org/3/getting-started/introduction
+
 ## Website:
 
 https://rpmovies.netlify.app/
