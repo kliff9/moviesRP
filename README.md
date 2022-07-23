@@ -19,5 +19,8 @@ A Movie application where users are able to search through a database of movies 
 
 https://rpmovies.netlify.app/
 
-## Preview
+## Resource
 
+https://www.udemy.com/course/angular-beginner-practical-guide/
+
+## Preview
