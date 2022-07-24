@@ -24,3 +24,7 @@ https://rpmovies.netlify.app/
 https://www.udemy.com/course/angular-beginner-practical-guide/
 
 ## Preview
+
+
+https://user-images.githubusercontent.com/32655437/180656091-bb671f32-c8e1-4a5c-b73f-74c20cba6b05.mp4
+
