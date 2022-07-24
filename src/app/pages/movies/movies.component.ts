@@ -18,7 +18,6 @@ export class MoviesComponent implements OnInit {
 
   ngOnInit(): void {
     this.route.params.pipe(take(1)).subscribe(({ genreId }) => {
-      // console.log('genreId', this.route.params);
       if (genreId) {
         this.genreId = genreId;
         this.getMoviesByGenre(genreId, 1);
@@ -29,7 +28,6 @@ export class MoviesComponent implements OnInit {
   }
 
   getPagedMovies(page: number, searchKeyword?: string) {
-    //Means optional parameter
     this.moviesService.searchMovies(page, searchKeyword).subscribe((movies) => {
       this.movies = movies;
       console.log(this.movies);
@@ -42,14 +40,6 @@ export class MoviesComponent implements OnInit {
     });
   }
 
-  // paginate(event: any) {
-  //   const pageNumber = event.page + 1;
-  //   if (this.genreId) {
-  //     this.getMoviesByGenre(this.genreId, pageNumber);
-  //   } else {
-  //     this.getPagedMovies(pageNumber);
-  //   }
-  // }
   paginate(event: any) {
     const pageNumber = event.page + 1;
 
@@ -66,7 +56,6 @@ export class MoviesComponent implements OnInit {
 
   searchChanged() {
     if (this.searchValue) {
-      // we use if because this.sereachvalue default is null i think
       console.log('this.searchValue: ', this.searchValue);
       this.getPagedMovies(1, this.searchValue);
     }

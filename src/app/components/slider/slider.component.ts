@@ -26,7 +26,6 @@ export class SliderComponent implements OnInit {
   ngOnInit(): void {
     //Timer
     if (!this.isBanner) {
-      // prevent movie deatails from switch images for no reason
       setInterval(() => {
         this.currentSlideIndex = ++this.currentSlideIndex % this.items.length;
       }, 5000);

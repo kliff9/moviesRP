@@ -18,16 +18,9 @@ export class MovieComponent implements OnInit, OnDestroy {
   imagesSizes = IMAGES_SIZES;
   similarMovies: Movie[] = [];
 
-  //route read parametes passed in URL
   constructor(private route: ActivatedRoute, private moviesService: MoviesService) {}
-  // The pipe() function takes as its arguments the functions you want to combine,
-  // and returns a new function that, when executed, runs the composed functions in sequence.
-  // A Pipeable Operator is essentially a pure function which takes one Observable as input and generates another
-  // Observable as output. Subscribing to the output Observable will also subscribe to the input Observable.
-  //     this.route.params.subscribe((params) => {
-  //.subscribe will always run? and oberving route params
+
   ngOnInit(): void {
-    //.pipe() to prevent memory leaks
     this.route.params.pipe(first()).subscribe((params) => {
       console.log('params: ', params);
     });
@@ -38,12 +31,11 @@ export class MovieComponent implements OnInit, OnDestroy {
       this.getMovieVideos(id);
       this.getMovieImages(id);
       this.getMovieCredits(id);
-      //   this.getMovieSimilar(id);
+      this.getMovieSimilar(id);
     });
   }
 
   ngOnDestroy() {
-    // no staying in the memory?
     console.log('component destroyed');
   }
 
@@ -61,11 +53,11 @@ export class MovieComponent implements OnInit, OnDestroy {
     });
   }
 
-  // getMovieSimilar(id: string) {
-  //   this.moviesService.getMovieSimilar(id).subscribe((movieSimilarData) => {
-  //     this.similarMovies = movieSimilarData;
-  //   });
-  // }
+  getMovieSimilar(id: string) {
+    this.moviesService.getMovieSimilar(id).subscribe((movieSimilarData) => {
+      this.similarMovies = movieSimilarData;
+    });
+  }
 
   getMovieImages(id: string) {
     this.moviesService.getMovieImages(id).subscribe((movieImagesData) => {

@@ -16,16 +16,13 @@ export class MoviesService {
   constructor(private http: HttpClient) {}
 
   getMovies(type: string = 'upcoming', count: number = 12) {
-    // expect <MovieDto> get method return abservable
     return this.http.get<MovieDto>(`${this.baseUrl}/movie/${type}?api_key=${this.apiKey}`).pipe(
       switchMap((res) => {
-        // switch to MovieDto.Movies[]
         return of(res.results.slice(0, count));
       })
     );
   }
   searchMovies(page: number, searchValue?: string) {
-    //if there a search value change api
     const uri = searchValue ? '/search/movie' : '/movie/popular';
     return this.http
       .get<MovieDto>(
@@ -33,7 +30,6 @@ export class MoviesService {
       )
       .pipe(
         switchMap((res) => {
-          // switch to MovieDto.Movies[]
           return of(res.results);
         })
       );
@@ -83,15 +79,13 @@ export class MoviesService {
       );
   }
 
-  // searchMovies(page: number, searchValue?: string) {
-  //   const uri = searchValue ? '/search/movie' : '/movie/popular';
-  //   return this.http
-  //     .get<MovieDto>(
-  //       `${this.baseUrl}${uri}?page=${page}&query=${searchValue}&api_key=${this.apiKey}`
-  //     )
-  //     .pipe(
-  //       switchMap((res) => {
-  //         return of(res.results);
-  //       })
-  //     );
+  getMovieSimilar(id: string) {
+    return this.http
+      .get<MovieDto>(`${this.baseUrl}/movie/${id}/similar?api_key=${this.apiKey}`)
+      .pipe(
+        switchMap((res) => {
+          return of(res.results.slice(0, 12));
+        })
+      );
+  }
 }

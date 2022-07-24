@@ -61,7 +61,6 @@
     </p-tabPanel>
     <p-tabPanel header="Photos">
       <div class="grid">
-        <!-- ? insteed of making ngIf -->
         <ng-container *ngFor="let movieImage of movieImages?.backdrops">
           <div class="col-12 md:col-4 lg:col-4">
             <p-image
@@ -85,4 +84,3 @@
   </p-carousel>
   <items-banner [items]="similarMovies" title="Similar Movies"></items-banner>
 </ng-container>
-<!-- <pre> {{ movie | json }} </pre> -->

@@ -12,7 +12,6 @@ export class HomeComponent implements OnInit {
   popularMovies: Movie[] = [];
   upcomingMovies: Movie[] = [];
   topRatedMovies: Movie[] = [];
-  // popularTvShows: Tv[] = [];
   constructor(private moviesService: MoviesService) {}
   ngOnInit(): void {
     this.moviesService.getMovies('popular').subscribe((movies) => {
