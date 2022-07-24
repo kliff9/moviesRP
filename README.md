@@ -1,27 +1,26 @@
 # RPmovies
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.6.
+## Purpose:
 
-## Development server
+A Movie application where users are able to search through a database of movies to find their wanted selection 
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Technologies Used:
+◼ HTML - The standard markup language for creating Web pages.
 
-## Code scaffolding
+◼ SASS - Most mature, stable, and powerful professional grade CSS extension language in the world.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+◼ Normalize.css - A modern, HTML5-ready alternative to CSS reset
 
-## Build
+◼ Angular - A component-based framework for building scalable web applications
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+◼ API - https://developers.themoviedb.org/3/getting-started/introduction
 
-## Running unit tests
+## Website:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+https://rpmovies.netlify.app/
 
-## Running end-to-end tests
+## Resource
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+https://www.udemy.com/course/angular-beginner-practical-guide/
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Preview
