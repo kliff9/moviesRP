@@ -17,7 +17,7 @@ A Movie application where users are able to search through a database of movies 
 
 ## Website:
 
-https://rpmovies.netlify.app/
+https://movies-rp.vercel.app/
 
 ## Resource
 
