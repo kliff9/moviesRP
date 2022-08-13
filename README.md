@@ -2,7 +2,9 @@
 
 ## Purpose:
 
-A Movie application where users are able to search through a database of movies to find their wanted selection 
+
+This Movie application allows users to browse through a database of movies of their choosing and learn about all the details related to that movie. This application has features a a variety of Search functionality to easily find the movie of choice. 
+
 
 ## Technologies Used:
 ◼ HTML - The standard markup language for creating Web pages.
